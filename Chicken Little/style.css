@@ -30,6 +30,6 @@ a:hover {
 	text-decoration: none;
 }
 
-.audio-background {
-	visibility: hidden;
+div.audio-background {
+	display: none;
 }
