@@ -1,0 +1,29 @@
+body {
+	font-family: gill sans;
+}
+
+div.tweet {
+	display: block;
+	margin-left: 30vw;
+}
+
+div.review {
+	padding: 10px;
+	margin-left: 40vw;
+	border: 3px solid black;
+	float: left;
+	background: transparent;
+	color: yellow;
+	position: relative;	
+}
+
+a {
+	color: blue;
+	text-decoration: none;
+}
+
+a:hover {
+	color: red;
+	background: blue;
+	text-decoration: none;
+}

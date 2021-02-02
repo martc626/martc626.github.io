@@ -1,0 +1,31 @@
+body {
+    background-image: url('giphy.gif');
+    background-size: cover;
+    height: 100vh;
+    padding:0;
+    margin:0;
+}
+
+.buttons {
+	font-family: gill sans;
+	font-size: 30px;
+	padding: 10px;
+	margin-left: 15vw;
+	margin-top: 70vh;
+	border: 3px solid black;
+	float: left;
+	background: transparent;
+	color: yellow;
+	position: relative;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	color: red;
+	background: blue;
+	text-decoration: none;
+}
