@@ -7,27 +7,27 @@ body {
 
 @font-face {
 	font-family: 'Objective';
-	src: url(fonts/Objective-Regular.woff2) format('woff2');
+	src: url(Fonts/Objective-Regular.woff2) format('woff2');
 }
 
 @font-face {
 	font-family: 'Objective-Bold';
-	src: url(fonts/Objective-Bold.woff2) format('woff2');
+	src: url(Fonts/Objective-Bold.woff2) format('woff2');
 }
 
 @font-face {
 	font-family: 'Objective-Italic';
-	src: url(fonts/Objective-Italic.woff2) format('woff2');
+	src: url(Fonts/Objective-Italic.woff2) format('woff2');
 }
 
 @font-face {
 	font-family: 'Waltograph';
-	src: url(fonts/Waltograph-Regular.woff2) format('woff2');
+	src: url(Fonts/Waltograph-Regular.woff2) format('woff2');
 }
 
 @font-face {
 	font-family: 'Waltograph-Bold';
-	src: url(fonts/Waltograph-Bold.woff2) format('woff2');
+	src: url(Fonts/Waltograph-Bold.woff2) format('woff2');
 }
 
 h1 {
