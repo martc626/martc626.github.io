@@ -1,0 +1,118 @@
+body {
+	background-image: url(stars.gif);
+	text-align: center;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+@font-face {
+	font-family: 'Objective';
+	src: url(fonts/Objective-Regular.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Objective-Bold';
+	src: url(fonts/Objective-Bold.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Objective-Italic';
+	src: url(fonts/Objective-Italic.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Waltograph';
+	src: url(fonts/Waltograph-Regular.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Waltograph-Bold';
+	src: url(fonts/Waltograph-Bold.woff2) format('woff2');
+}
+
+h1 {
+	font-family: 'Waltograph';
+	font-size: 100px;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: darkblue;
+}
+
+h3 {
+	font-family: 'Objective-Bold';
+}
+
+p {
+	font-family: 'Objective';
+	text-align: left;
+}
+
+ul {
+	font-family: 'Objective';
+	text-align: left;
+}
+
+ol {
+	font-family: 'Objective';
+	text-align: left;
+}
+
+.title {
+	font-family: 'Waltograph-Bold';
+	font-size: 30px;
+	text-decoration: wavy underline;
+	margin-bottom: 20px;
+}
+
+.sub-title {
+	font-family: 'Objective-Bold';
+	font-size: 20px;
+	margin-top: 40px; 
+}
+
+.sub-sub-title {
+	font-family: 'Objective-Italic';
+	text-decoration: underline;
+	text-align: left;
+}
+
+.intro {
+	background-color: powderblue;
+	padding: 20px;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+.section {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding: 20px;
+}
+
+.History {
+	background-color: yellow;
+}
+
+.Lands {
+	background-color: magenta;
+}
+
+.Transportation {
+	background-color: chartreuse;
+}
+
+.Possiblefilm {
+	background-color: orange;
+}
+
+.Popculture {
+	background-color: hotpink;
+}
+
+.Seealso {
+	background-color: blue;
+}
+
+.References {
+	background-color: red;
+}
