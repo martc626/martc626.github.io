@@ -3,9 +3,19 @@ body {
 	text-align: center;
 }
 
-div.homepage {
+.homepage {
 	margin-top: 25vh;
 	margin-bottom: 25vh;
+}
+
+.homepage a {
+	color: #ffdb00;
+	text-decoration: none;
+}
+
+.homepage a:hover {
+	color: white;
+	text-decoration: none;
 }
 
 h1 {
@@ -23,7 +33,7 @@ h3 {
 	font-style: normal;
 }
 
-div.studentlist {
+.studentlist {
 	margin-top: 30vh;
 	margin-bottom: 30vh;
 	color: white;
@@ -32,7 +42,8 @@ div.studentlist {
 	font-style: normal;
 }
 
-div.lunastuff {
+.row {
+	display: flex;
 	margin-top: 25vh;
 	margin-bottom: 25vh;
 	color: white;
@@ -41,12 +52,16 @@ div.lunastuff {
 	font-style: normal;
 }
 
-a {
+.col {
+	flex: 1;
+}
+
+.content a {
 	color: white;
 	text-decoration: none;
 }
 
-a:hover {
+.content a:hover {
 	color: #7373ff;
 	background: #ffdb00;
 	text-decoration: none;
