@@ -15,19 +15,16 @@ body {
 
 }
 
-div.title {
-	display: inline-block;
-	margin-top: 30px;
-	margin-bottom: 20px;
-}
-
 .title {
 	font-family: 'Sunshine in White';
 	font-weight: 900;
 	font-style: normal;
 	font-size: 120px;
 	text-align: center;
-	padding: 20px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	padding: 20px;	
+	display: inline-block;
 	color: black;
 	animation: color 10s ease-in infinite alternate, bounce 15s ease-in infinite alternate-reverse;	
 }
