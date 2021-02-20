@@ -1,0 +1,306 @@
+body {
+	margin: 0px;
+}
+
+.container {
+	display: flex;
+}
+
+.box {
+	width: 100vw;
+	height: 100vh;
+}
+
+.box1 { 
+	background-color: #e5dc4f;
+	animation: flowone 30s ease infinite alternate;
+}
+
+@keyframes flowone {
+	0%, 100% {
+		width: default;
+	}
+
+	25% {
+		width: 70%;
+	}
+
+	50% {
+		width: 100%;
+	}
+
+	75% {
+		width: 50%;
+	}
+}
+
+.box2 {
+	background-color: #aadd54;
+	animation: flowtwo 30s ease infinite alternate;
+}
+
+@keyframes flowtwo {
+	0%, 100% {
+		width: default;
+	}
+
+	25% {
+		width: 140%;
+	}
+
+	50% {
+		width: 90%;
+	}
+
+	75% {
+		width: 230%;
+	}
+}
+
+.box3 { 
+	background-color: #91d17d;
+	animation: flowthree 30s ease infinite alternate;
+}
+
+@keyframes flowthree {
+	0%, 100% {
+		width: default;
+	}
+
+	25% {
+		width: 90%;
+	}
+
+	50% {
+		width: 30%;
+	}
+
+	75% {
+		width: 100%;
+	}
+}
+
+.box4 { 
+	background-color: #6aaeb9;
+	animation: flowfour 30s ease infinite alternate;
+}
+
+@keyframes flowfour {
+	0%, 100% {
+		width: default;
+	}
+
+	25% {
+		width: 50%;
+	}
+
+	50% {
+		width: 160%;
+	}
+
+	75% {
+		width: 20%;
+	}
+}
+
+.box5 { 
+	background-color: #5888d0;
+	animation: flowfive 30s ease infinite alternate;
+}
+
+@keyframes flowfive {
+	0%, 100% {
+		width: default;
+	}
+
+	25% {
+		width: 200%;
+	}
+
+	50% {
+		width: 120%;
+	}
+
+	75% {
+		width: 80%;
+	}
+}
+
+.box6 { 
+	background-color: #6874c0;
+	animation: flowsix 30s ease infinite alternate;
+}
+
+@keyframes flowsix {
+	0%, 100% {
+		width: default;
+	}
+
+	25% {
+		width: 100%;
+	}
+
+	50% {
+		width: 50%;
+	}
+
+	75% {
+		width: 180%;
+	}
+}
+
+.box7 { 
+	background-color: #6e62a0;
+	animation: flowseven 30s ease infinite alternate;
+}
+
+@keyframes flowseven {
+	0%, 100% {
+		width: default;
+	}
+
+	25% {
+		width: 140%;
+	}
+
+	50% {
+		width: 170%;
+	}
+
+	75% {
+		width: 40%;
+	}
+}
+
+.box8 { 
+	background-color: #816897;
+	animation: floweight 30s ease infinite alternate;
+}
+
+@keyframes floweight {
+	0%, 100% {
+		width: default;
+	}
+
+	25% {
+		width: 10%;
+	}
+
+	50% {
+		width: 130%;
+	}
+
+	75% {
+		width: 70%;
+	}
+}
+
+.box9 { 
+	background-color: #b66a77;
+	animation: flownine 30s ease infinite alternate;
+}
+
+@keyframes flownine {
+	0%, 100% {
+		width: default;
+	}
+
+	25% {
+		width: 90%;
+	}
+
+	50% {
+		width: 40%;
+	}
+
+	75% {
+		width: 130%;
+	}
+}
+
+.box10 { 
+	background-color: #d36764;
+	animation: flowten 30s ease infinite alternate;
+}
+
+@keyframes flowten {
+	0%, 100% {
+		width: default;
+	}
+
+	25% {
+		width: 20%;
+	}
+
+	50% {
+		width: 60%;
+	}
+
+	75% {
+		width: 150%;
+	}
+}
+
+.box11 { 
+	background-color: #e18b19;
+	animation: floweleven 30s ease infinite alternate;
+}
+
+@keyframes floweleven {
+	0%, 100% {
+		width: default;
+	}
+
+	25% {
+		width: 90%;
+	}
+
+	50% {
+		width: 170%;
+	}
+
+	75% {
+		width: 30%;
+	}
+}
+
+.box12 { 
+	background-color: #edc553;
+	animation: flowtwelve 30s ease infinite alternate;
+}
+
+@keyframes flowtwelve {
+	0%, 100% {
+		width: default;
+	}
+
+	25% {
+		width: 200%;
+	}
+
+	50% {
+		width: 80%;
+	}
+
+	75% {
+		width: 120%;
+	}
+}
+
+.signature {
+	position: absolute;
+	bottom: 3%;
+	right: 3%;
+	width: 130px;
+	animation: fadein 5s ease infinite alternate;
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}	
+}
