@@ -44,7 +44,7 @@ rows.forEach((item, i) =>{
 	let loop = dynamicMarquee.loop;
 
 	let marquee = new Marquee(document.getElementById('marquee'+i), {
-		rate: -1500, // 20 pixels/s downwards
+		rate: -2600, // 20 pixels/s downwards
 		upDown: false, // downwards instead of to the right
 	});
 
@@ -52,7 +52,7 @@ rows.forEach((item, i) =>{
 		document.querySelector('#marquee'+i).style.opacity=1;
     	marquee.setRate(-50);		
 
-	},2000)
+	},600)
 
 	let control = loop(marquee, [() => parseHTML(item)]);
 
