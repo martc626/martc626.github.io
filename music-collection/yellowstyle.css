@@ -1,10 +1,6 @@
 body {
 	margin: 0;
-}
-
-a {
-	color: white;
-	text-decoration: none;
+	background-color: #FFFFBF;
 }
 
 .header {
@@ -36,6 +32,15 @@ a {
 	border: 2px solid black;
 	border-radius: 120px/60px;
 	width: 80px;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+#reset a {
+	color: black;
 }
 
 .button:hover {
@@ -74,8 +79,8 @@ a {
 .content {
 	display: grid;
 	grid-gap: 10px;
-	grid-template-rows: repeat(5, 330px);
-	grid-template-columns: repeat(5, 250px);
+	grid-template-rows: 330px;
+	grid-template-columns: repeat(3, 250px);
 	margin-left: 5vw;
 	margin-right: 5vw;
 }
@@ -113,7 +118,7 @@ a {
 	}
 
 	.content {
-		grid-template-rows: repeat(25, 330px);
+		grid-template-rows: repeat(3, 330px);
 		grid-template-columns: 450px;
 	}
 
