@@ -2,11 +2,6 @@ body {
 	margin: 0;
 }
 
-a {
-	color: white;
-	text-decoration: none;
-}
-
 .header {
 	font-family: roc-grotesk, sans-serif;
 	font-weight: 900;
@@ -36,6 +31,15 @@ a {
 	border: 2px solid black;
 	border-radius: 120px/60px;
 	width: 80px;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+#reset a {
+	color: black;
 }
 
 .button:hover {
