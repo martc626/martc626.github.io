@@ -57,7 +57,7 @@ rows.forEach((item, i) =>{
 	let control = loop(marquee, [() => parseHTML(item)]);
 
 	newDiv.addEventListener('mouseenter',function(){
-		marquee.setRate(0);
+		marquee.setRate(300);
 	})
 
 	newDiv.addEventListener('mouseleave',function(){

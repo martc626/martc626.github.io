@@ -31,22 +31,16 @@ body,html {
 	font-weight: 600;
 }
 
-.scroll {
-	position: absolute;
-	overflow: hidden;
-	top: 0;
-	left: 0;
-	width: 100%;
-}
-
-.marquee {
+.paragraph {
 	font-family: 'GT-Walsheim';
 	font-size: 24pt;
 	font-weight: 300; 
 	color: lightgray;
 	border-bottom: 2px black solid;
-	padding: 4px;
-	opacity: 0;
+	margin-bottom: 3px;
+	padding: 10px;
+	top: 0;
+	left: 0;
 }
 
 span {
