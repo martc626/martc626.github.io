@@ -31,6 +31,12 @@ body,html {
 	font-weight: 600;
 }
 
+.content {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 .paragraph {
 	font-family: 'GT-Walsheim';
 	font-size: 24pt;
@@ -47,7 +53,7 @@ span {
 
 .alternate {
 	font-family: 'GT-Walsheim';
-	font-size: 10pt;
+	font-size: 14pt;
 	font-weight: 300; 
 	position: fixed;
 	bottom: 0;
@@ -65,4 +71,15 @@ a {
 a:hover {
 	text-decoration: none;
 	color: lightgray;
+}
+
+@media only screen and (max-width: 767px) {
+	.paragraph {
+		font-size: 16pt;
+		line-height: 23pt;
+	}
+
+	.alternate {
+		font-size: 10pt;
+	}
 }

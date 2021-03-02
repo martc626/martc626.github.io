@@ -44,7 +44,7 @@ rows.forEach((item, i) =>{
 	let loop = dynamicMarquee.loop;
 
 	let marquee = new Marquee(document.getElementById('marquee'+i), {
-		rate: -2600, // 20 pixels/s downwards
+		rate: -2700, // 20 pixels/s downwards
 		upDown: false, // downwards instead of to the right
 	});
 
@@ -63,7 +63,7 @@ rows.forEach((item, i) =>{
 	newDiv.addEventListener('mouseleave',function(){
 		marquee.setRate(-50);
 	})
-
 })
+ 
 
 

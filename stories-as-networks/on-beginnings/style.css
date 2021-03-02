@@ -55,7 +55,7 @@ span {
 
 .alternate {
 	font-family: 'GT-Walsheim';
-	font-size: 10pt;
+	font-size: 13pt;
 	font-weight: 300; 
 	position: fixed;
 	bottom: 0;
@@ -73,4 +73,15 @@ a {
 a:hover {
 	text-decoration: none;
 	color: lightgray;
+}
+
+@media only screen and (max-width: 767px) {
+	.marquee {
+		font-size: 16pt;
+		padding: 8px;
+	}
+
+	.alternate {
+		font-size: 10pt;
+	}
 }

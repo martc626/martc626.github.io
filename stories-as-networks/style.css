@@ -42,7 +42,7 @@ body {
 				0 0 40px white,
 				0 0 60px white,
 				0 0 80px white;	
-	animation: bigbang 10s ease-in-out 1 forwards;
+	animation: bigbang 8s ease-in-out 1 forwards;
 }
 
 @keyframes bigbang {
@@ -51,13 +51,13 @@ body {
 	}
 
 	100% {
-		width: 100px;
-		height: 100px;
+		width: 700px;
+		height: 700px;
 		background: white;
 		box-shadow: 0 0 0 30px white,
 					0 0 0 60px white,
-					0 0 0 80px white,
-					0 0 0 900px white;
+					0 0 0 100px white,
+					0 0 0 1500px white;
 	}
 }
 
@@ -65,6 +65,8 @@ body {
 	font-size: 100pt;
 	font-style: normal;
 	font-weight: 600;
+	padding-bottom: 20px;
+	border-bottom: 10px solid black;
 }
 
 .source {
@@ -76,12 +78,13 @@ body {
 }
 
 .arrow {
-	font-size: 100pt;
-	font-style: normal;
-	font-weight: 600;
-	margin-top: 100px;
-	margin-left: 40vw;
-	animation: fade 3s ease-in-out infinite;
+	width: 200px;
+	position: fixed;
+	right: 8%;
+	bottom: 10%;
+	animation: 
+		fade 3s ease-in-out infinite,
+		bounce 3s ease-in-out infinite alternate;
 }
 
 @keyframes fade {
@@ -94,9 +97,19 @@ body {
 	}
 }
 
+@keyframes bounce {
+	0%, 100% {
+		transform: translateX(0);
+	}
+
+	50% {
+		transform: translateX(-10%);
+	}
+}
+
 .header {
 	font-family: 'GT-Walsheim';
-	animation: shift 10s ease-in-out 1 forwards;
+	animation: shift 5s ease-in-out 1 forwards;
 }
 
 @keyframes shift {
@@ -105,15 +118,47 @@ body {
 	}
 
 	100% {
-		transform: translateX(5vh);
+		transform: translateX(5%);
 	}	
 }
 
+@media only screen and (max-width: 767px) {
+	.bigbang {
+		animation: bigbang 8s ease-in-out 1 forwards;
+	}
 
-a {
-	color: black;
-	text-decoration: none;
+	@keyframes bigbang {
+		0% {
+			box-shadow: default;
+		}
+
+		100% {
+			width: 420px;
+			height: 420px;
+			background: white;
+			box-shadow: 0 0 0 30px white,
+						0 0 0 60px white,
+						0 0 0 100px white,
+						0 0 0 400px white;
+		}
+	}
+
+	.title {
+		font-size: 60pt;
+		padding-bottom: 10px;
+		border-bottom: 8px solid black;
+	}
+
+	.source {
+		font-size: 16pt;
+		width: 330px;
+		margin-top: 30px;		
+	}
+
+	.arrow {
+		width: 150px;
+		right: 12%;
+		bottom: 6%;
+	}
 }
-a:hover {
-	color: gray;
-}
+
