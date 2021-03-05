@@ -1,0 +1,51 @@
+body {
+	margin: 0px;
+	animation: colorshift 10s infinite ease-in-out;
+}
+
+@keyframes colorshift {
+	0%{
+		background-color: red;
+	}
+	20%{
+		background-color: orange;
+	}
+	40%{
+		background-color: yellow;
+	}
+	60%{
+		background-color: green;
+	}
+	80%{
+		background-color: blue;
+	}
+	100%{
+		background-color: purple;
+	}
+
+}
+
+.text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+h1,h3 {
+	color: white;
+	font-family: avenir;
+	font-weight: 900;
+}
+
+h1 {
+	font-size: 80pt;
+	margin: 0;
+	text-shadow: 0 0 60px white;
+}
+
+h3 {
+	font-size: 20pt;
+	text-shadow: 0 0 20px white;
+}
