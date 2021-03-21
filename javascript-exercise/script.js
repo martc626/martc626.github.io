@@ -45,22 +45,22 @@ var day = new Date().getDate();
 if (day === 1) {
 	console.log('ugh, the monday blues~');
 }
-if (day === 2) {
+else if (day === 2) {
 	console.log('it\'\s just tuesday?!??');
 }
-if (day === 3) {
+else if (day === 3) {
 	console.log('hump day wednesday, can this week end?');
 }
-if (day === 4) {
+else if (day === 4) {
 	console.log('thurday, so close to the weekend!!');
 }
-if (day === 5) {
+else if (day === 5) {
 	console.log('friday!! finally :)');
 }
-if (day === 6) {
+else if (day === 6) {
 	console.log('woot, saturday! let me laze around');
 }
-if (day === 7) {
+else (day === 7) {
 	console.log('fuck, it\'\s a sunday');
 }
 
@@ -104,4 +104,3 @@ lists.forEach(function(array) {
 
 var lists = [{favResto, pandemicStoppedMe, favNYCPlaces, favMovies}];
 console.log(lists);
-
