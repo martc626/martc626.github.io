@@ -41,12 +41,12 @@ if (time >= 19 && time <= 21.40) {
 	console.log('nope, it is not between 7 - 9:40 PM');
 }
 
-var day = new Date().getDate();
+var day = new Date().getDay();
 if (day === 1) {
 	console.log('ugh, the monday blues~');
 }
 else if (day === 2) {
-	console.log('it\'\s just tuesday?!??');
+	console.log('it\'s just tuesday?!??');
 }
 else if (day === 3) {
 	console.log('hump day wednesday, can this week end?');
@@ -60,8 +60,8 @@ else if (day === 5) {
 else if (day === 6) {
 	console.log('woot, saturday! let me laze around');
 }
-else (day === 7) {
-	console.log('fuck, it\'\s a sunday');
+else if (day === 7) {
+	console.log('fuck, it\'s a sunday');
 }
 
 var favResto = [
