@@ -5,7 +5,7 @@ var counter = document.querySelector('#count');
 var red = document.querySelector('#red');
 var yellow = document.querySelector('#yellow');
 var blue = document.querySelector('#blue');
-var black = document.querySelector('#blue');
+var black = document.querySelector('#black');
 
 
 button1.addEventListener('click', function(event){
@@ -50,3 +50,23 @@ red.addEventListener('click', function(event){
 	})	
 });
 
+yellow.addEventListener('click', function(event){
+	var images = container.querySelectorAll('svg');
+	images.forEach(function(image){
+		image.style.fill = 'yellow';
+	})	
+});
+
+blue.addEventListener('click', function(event){
+	var images = container.querySelectorAll('svg');
+	images.forEach(function(image){
+		image.style.fill = 'blue';
+	})	
+});
+
+black.addEventListener('click', function(event){
+	var images = container.querySelectorAll('svg');
+	images.forEach(function(image){
+		image.style.fill = 'black';
+	})	
+});
