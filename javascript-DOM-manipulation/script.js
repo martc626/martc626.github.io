@@ -46,7 +46,7 @@ container.addEventListener('click', function(event){
 red.addEventListener('click', function(event){
 	var images = container.querySelectorAll('svg');
 	images.forEach(function(image){
-		image.style.backgroundColor = 'red';
+		image.style.fill = 'red';
 	})	
 });
 
