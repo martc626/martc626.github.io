@@ -88,9 +88,8 @@ body {
 	cursor: pointer;
 }
 
-svg {
-	width: 100px;
+.smiley {
 	height: 100px;
-	cursor: pointer;
+	visibility: hidden;
 	position: absolute;
 }

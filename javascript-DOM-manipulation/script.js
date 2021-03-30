@@ -10,63 +10,69 @@ var black = document.querySelector('#black');
 
 button1.addEventListener('click', function(event){
 	console.log(event, event.target);
-	var image = document.createElement('svg');
-	image.src = 'smiley.svg';
- 	
- 	image.style.top = (80 * Math.random()) + '%';
-	image.style.left = (90 * Math.random()) + '%';
+	var smiley = document.querySelector('.smiley');
+	var smileyClone = smiley.cloneNode(true);
+	smileyClone.classList.add('.smileys');
+	smileyClone.style.visibility = 'visible';
 
-	container.appendChild(image);
+	smileyClone.style.top = (80 * Math.random()) + '%';
+	smileyClone.style.left = (90 * Math.random()) + '%';
+	
+	container.appendChild(smileyClone);
 
-	var images = container.querySelectorAll('svg');
-	var counter = images.length;
+	var smileyClone = container.querySelectorAll('.smiley');
+	var counter = smileyClone.length - 1;
 	count.innerHTML = counter;
 });
 
 button2.addEventListener('click', function(event){
-	console.log(event, event.target);
-	container.innerHTML = '';	
+	console.log(event, event.target);	
+	var smileyClone = container.querySelectorAll('.smileys');
 
-	var images = container.querySelectorAll('svg');
-	var counter = images.length;
+	smileyClone.forEach(function(){
+		smileyClone.remove();
+	})
+
+	var smileyClone = container.querySelectorAll('.smiley');
+	var counter = smileyClone.length - 1;
 	count.innerHTML = counter;
 });
 
 container.addEventListener('click', function(event){
 	console.log(event, event.target);
-	if(event.target.tagName = 'svg'){
+	if(event.target.tagName = '.smileys'){
 		event.target.remove();
 	}
 
-	var images = container.querySelectorAll('svg');
-	var counter = images.length;
+	var smileyClone = container.querySelectorAll('.smiley');
+	var counter = smileyClone.length - 1;
 	count.innerHTML = counter;
 });
 
 red.addEventListener('click', function(event){
-	var images = container.querySelectorAll('svg');
-	images.forEach(function(image){
-		image.style.fill = 'red';
+	var smileyClone = container.querySelectorAll('svg');
+	smileyClone.forEach(function(svg){
+		svg.style.fill = 'red';
 	})	
 });
 
 yellow.addEventListener('click', function(event){
-	var images = container.querySelectorAll('svg');
-	images.forEach(function(image){
-		image.style.fill = 'yellow';
-	})	
+	var smileyClone = container.querySelectorAll('svg');
+	smileyClone.forEach(function(svg){
+		svg.style.fill = 'yellow';
+	})
 });
 
 blue.addEventListener('click', function(event){
-	var images = container.querySelectorAll('svg');
-	images.forEach(function(image){
-		image.style.fill = 'blue';
+	var smileyClone = container.querySelectorAll('svg');
+	smileyClone.forEach(function(svg){
+		svg.style.fill = 'blue';
 	})	
 });
 
 black.addEventListener('click', function(event){
-	var images = container.querySelectorAll('svg');
-	images.forEach(function(image){
-		image.style.fill = 'black';
+	var smileyClone = container.querySelectorAll('svg');
+	smileyClone.forEach(function(svg){
+		svg.style.fill = 'black';
 	})	
 });
