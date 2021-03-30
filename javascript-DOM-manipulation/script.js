@@ -12,7 +12,7 @@ button1.addEventListener('click', function(event){
 	console.log(event, event.target);
 	var smiley = document.querySelector('.smiley');
 	var smileyClone = smiley.cloneNode(true);
-	smileyClone.classList.add('.smileys');
+	smileyClone.classList.add('smileys');
 	smileyClone.style.visibility = 'visible';
 
 	smileyClone.style.top = (80 * Math.random()) + '%';
@@ -29,8 +29,8 @@ button2.addEventListener('click', function(event){
 	console.log(event, event.target);	
 	var smileyClone = container.querySelectorAll('.smileys');
 
-	smileyClone.forEach(function(){
-		smileyClone.remove();
+	smileyClone.forEach(function(smiley){
+		smiley.remove();
 	})
 
 	var smileyClone = container.querySelectorAll('.smiley');
@@ -40,7 +40,7 @@ button2.addEventListener('click', function(event){
 
 container.addEventListener('click', function(event){
 	console.log(event, event.target);
-	if(event.target.tagName = '.smileys'){
+	if(event.target.classList = 'smileys'){
 		event.target.remove();
 	}
 
@@ -50,29 +50,25 @@ container.addEventListener('click', function(event){
 });
 
 red.addEventListener('click', function(event){
-	var smileyClone = container.querySelectorAll('svg');
-	smileyClone.forEach(function(svg){
-		svg.style.fill = 'red';
-	})	
+	document.querySelectorAll('.smileys .st0').forEach(function(el){
+		el.style.fill = 'red';
+	})
 });
 
 yellow.addEventListener('click', function(event){
-	var smileyClone = container.querySelectorAll('svg');
-	smileyClone.forEach(function(svg){
-		svg.style.fill = 'yellow';
+	document.querySelectorAll('.smileys .st0').forEach(function(el){
+		el.style.fill = 'yellow';
 	})
 });
 
 blue.addEventListener('click', function(event){
-	var smileyClone = container.querySelectorAll('svg');
-	smileyClone.forEach(function(svg){
-		svg.style.fill = 'blue';
-	})	
+	document.querySelectorAll('.smileys .st0').forEach(function(el){
+		el.style.fill = 'blue';
+	})
 });
 
 black.addEventListener('click', function(event){
-	var smileyClone = container.querySelectorAll('svg');
-	smileyClone.forEach(function(svg){
-		svg.style.fill = 'black';
+	document.querySelectorAll('.smileys .st0').forEach(function(el){
+		el.style.fill = 'black';
 	})	
 });
