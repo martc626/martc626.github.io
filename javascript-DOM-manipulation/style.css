@@ -93,3 +93,7 @@ body {
 	visibility: hidden;
 	position: absolute;
 }
+
+.smiley:hover {
+	cursor: pointer;	
+}
