@@ -7,7 +7,6 @@ var yellow = document.querySelector('#yellow');
 var blue = document.querySelector('#blue');
 var black = document.querySelector('#black');
 
-
 button1.addEventListener('click', function(event){
 	console.log(event, event.target);
 	var smiley = document.querySelector('.smiley');
@@ -40,7 +39,7 @@ button2.addEventListener('click', function(event){
 
 container.addEventListener('click', function(event){
 	console.log(event, event.target);
-	if(event.target.classList = 'smileys'){
+	if(event.target.classList.contains('smileys')){
 		event.target.remove();
 	}
 
@@ -49,25 +48,45 @@ container.addEventListener('click', function(event){
 	count.innerHTML = counter;
 });
 
+container.addEventListener('mouseenter', function(event){
+	console.log(event, event.target);
+	document.querySelectorAll('.smileys').forEach(function(zoom){
+		zoom.style.height = '130px';
+		zoom.style.opacity = '0.3';
+	})
+})
+
+container.addEventListener('mouseleave', function(event){
+	console.log(event, event.target);
+	document.querySelectorAll('.smileys').forEach(function(zoom){
+		zoom.style.height = '100px';
+		zoom.style.opacity = '1';
+	})
+})
+
 red.addEventListener('click', function(event){
+	console.log(event, event.target);
 	document.querySelectorAll('.smileys .st0').forEach(function(el){
 		el.style.fill = 'red';
 	})
 });
 
 yellow.addEventListener('click', function(event){
+	console.log(event, event.target);
 	document.querySelectorAll('.smileys .st0').forEach(function(el){
 		el.style.fill = 'yellow';
 	})
 });
 
 blue.addEventListener('click', function(event){
+	console.log(event, event.target);
 	document.querySelectorAll('.smileys .st0').forEach(function(el){
 		el.style.fill = 'blue';
 	})
 });
 
 black.addEventListener('click', function(event){
+	console.log(event, event.target);
 	document.querySelectorAll('.smileys .st0').forEach(function(el){
 		el.style.fill = 'black';
 	})	
