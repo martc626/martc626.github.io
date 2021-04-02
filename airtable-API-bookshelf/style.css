@@ -114,12 +114,14 @@ h1 {
 }
 
 .book-detail .more {
+  color: black;
   border: 2px outset #fdfd96;
   padding: 4px;
   text-decoration: none;
 }
 
 .book-detail .more:hover {
+  color: red;
   background-color: #fdfd96;
 }
 
