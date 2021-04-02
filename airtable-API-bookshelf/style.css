@@ -1,0 +1,167 @@
+body {
+  font-family: 'Quicksand';
+  background: skyblue;
+}
+
+.hidden {
+  display: none !important;
+}
+
+h1 {
+  font-size: 100px;
+  margin: 20px;
+  text-align: center;
+  color: white;
+  background-color: pink;
+  border: 10px outset pink;
+}
+
+.booksndeets {
+  display: flex;
+}
+
+.shelf {
+  margin-left: 20px;
+  border-bottom: 10px solid gray;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 2em;
+}
+
+.shelf .book-spine {
+  background: pink;
+  color: white;
+  border-left: 6px solid gray;
+  border-image: 
+    linear-gradient(
+      to right, 
+      gray, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+
+
+  height: fit-content;
+  width: 30px;
+  padding: 10px 0px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+  transform: rotate(180deg);
+
+  writing-mode: vertical-lr;
+  line-height: 30px;
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.shelf .book-spine.active {
+  background: #fdfd96;
+  color: black;
+}
+
+.shelf .book-spine:hover {
+  background: #fdfd96;
+  color: black;
+  animation: float 2s ease 1 forwards;
+}
+
+@keyframes float {
+  0% {
+    margin-bottom: default;
+  }
+
+  100% {
+    margin-bottom: 20px;
+  }
+}
+
+.book-detail {
+  display: flex;
+  margin: 0 20px;
+  background-color: white;
+  border: 8px outset #fdfd96;
+  padding: 20px;
+  height: fit-content; 
+}
+
+.book-detail .figure {
+  width: 200px;
+  flex: none;
+  margin-right: 30px;
+}
+
+.book-detail .cover-image {
+  width: 100%;
+  border: 5px solid black;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.book-detail .info {
+  max-width: 600px;
+}
+
+.book-detail .title {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.book-detail .description {
+  margin-top: 0.5em;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1300px) {
+  h1 {
+    font-size: 80px;
+  }
+  
+  .booksndeets {
+    flex-direction: column;
+  }
+
+  .shelf {
+    width: fit-content;
+  }
+
+  .book-detail {
+    align-items: center;
+  }
+
+  .book-detail .figure {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 2em;
+    margin-right: 20px; 
+  }
+}
+
+@media (max-width: 820px) {
+  h1 {
+    font-size: 40px;
+    padding: 20px 0; 
+  }
+  
+  .booksndeets {
+    flex-direction: column;
+  }
+
+  .shelf {
+    width: fit-content;
+  }
+
+  .book-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .book-detail .figure {
+    width: 100%;
+    max-width: 300px;
+    margin: 0;
+    margin-right: 20px;
+    margin-bottom: 2em;
+  }
+}
