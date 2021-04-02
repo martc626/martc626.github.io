@@ -113,6 +113,16 @@ h1 {
   line-height: 1.5;
 }
 
+.book-detail .more {
+  border: 2px outset #fdfd96;
+  padding: 4px;
+  text-decoration: none;
+}
+
+.book-detail .more:hover {
+  background-color: #fdfd96;
+}
+
 @media (max-width: 1300px) {
   h1 {
     font-size: 80px;
