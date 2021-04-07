@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Elastic Collections</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/okz1lsk.css">
+</head>
+<body>
+  <div class="bgm">
+    <audio controls autoplay>
+      <source src="bgm.mp3" type="audio/mp3">
+    </audio> 
+  </div>
+
+  <div class="nav">
+    <h1>Patron Saints of the Random</h1>
+    <div class="filters">
+      <p>Afflictions</p>
+      <p>Environment</p>
+      <p>Identity</p>
+    </div>
+  </div>
+
+  <div id="card-container"></div>
+
+  <!--
+    Include the official airtable javascript file before main.js
+    See https://github.com/airtable/airtable.js/#browser for more information.
+  -->
+  <script src="vendor/airtable.browser.js"></script>
+  <!-- Include your main.js file right before the closing <body> tag -->
+  <script src="main.js"></script>
+</body>
+</html>

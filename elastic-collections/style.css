@@ -1,0 +1,86 @@
+body {
+  background-color: gradient yellow;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters {
+  display: flex;
+}
+
+p {
+  display: flex;
+  cursor: pointer;
+  font-family: capellina-caps, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  color: blue;
+  margin-right: 30px; 
+}
+
+p:hover {
+  text-shadow: 0px 0px 8px yellow;
+  transition: all 0.5s ease-in;
+  cursor: pointer; 
+}
+
+h1 {
+  font-family: capellina-rough, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 80px;
+  margin: 20px 30px 10px;
+  color: blue;
+}
+
+h1:hover {
+  text-shadow: 0px 0px 10px yellow;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+}
+
+.card {
+  display: inline-block;
+  width: 300px;
+  height: 400px;
+  margin: 13px;
+  border-radius: 10px;
+  vertical-align: top;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 50px yellow;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+}
+
+.card__name {
+  font-family: capellina-caps, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  position: relative;
+  top: 0;
+  color: blue;
+}
+
+.card__image {
+  width: 220px;
+  height: 310px;
+  position: relative;
+}
+
+.card__patronage {
+  font-family: capellina-caps, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  position: relative;
+  bottom: 0;
+  color: blue;
+}
