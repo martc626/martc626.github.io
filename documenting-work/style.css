@@ -1,0 +1,94 @@
+body {
+	background-color: rgb(231, 120, 101);
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	position: relative;
+}
+
+.one {
+	width: 60%;
+	position: absolute;
+	left: 20vw;
+	top: 10vh;
+	z-index: 0;
+}
+
+.two {
+	width: 30%;
+	position: absolute;
+	left: 5vw;
+	top: 2vh;
+	opacity: 0.5;
+	z-index: 1;
+	transition: all 0.5s ease-in-out;
+}
+
+.two:hover {
+	opacity: 1;
+	width: 60%;
+}
+
+.three {
+	width: 30%;
+	position: absolute;
+	right: 5vw;
+	bottom: 10vh;
+	opacity: 0.5;
+	z-index: 1;
+	transition: all 0.5s ease-in-out;
+}
+
+.three:hover {
+	opacity: 1;
+	width: 60%;
+}
+
+.about {
+	top: 700px; 
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	background-color: rgb(236 229 118);
+	font-family: Helvetica;
+}
+
+.title {
+	font-size: 30px;
+	width: 30vw;
+	padding: 0 30px;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(231, 120, 101);
+}
+
+.desc {
+	font-size: 25px;
+	color: black;
+	width: 70vw;
+	padding: 0 40px;
+	background-color: white;
+}
+
+.details {
+	top: 750px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	justify-content: space-around;
+}
+
+.caption {
+	font-family: Helvetica;
+	font-size: 30px;
+	color: white;
+}
+
+.images {
+	height: 45vh;
+	margin-bottom: 50px;
+}
