@@ -33,37 +33,53 @@ base('patrons').select({
   records.forEach(function(record) {
     console.log('Retrieved', record.get('patron_saints'), record.fields);
     // Use the data in record.fields of your record object to insert the data from your
+    
+    // Contents for the front side of card
     var card = document.createElement('div');
     var name = document.createElement('div');
+    var crop = document.createElement('div');
     var image = document.createElement('img');
     var patronage = document.createElement('div');
+    var frontSide = document.createElement('div');
+    var backSide = document.createElement('div');
 
-    name.classList.add('card__name', 'flip_card_front');
+    name.classList.add('card__name');
     name.innerHTML = record.fields.patron_saints;
 
-    image.classList.add('card__image','flip_card_front');
+    image.classList.add('card__image');
     image.src = record.fields.image[0].url;
 
-    patronage.classList.add('card__patronage','flip_card_front');
+    patronage.classList.add('card__patronage');
     patronage.innerHTML = record.fields.patronage;   
 
+    crop.classList.add('crop');
     card.classList.add('card');
-    card.style.backgroundColor = '#F1F8CA';
+    // card.style.backgroundColor = '#F1F8CA';
 
     // Append the new content to your document
-    card.append(name, image, patronage);
+    card.style.setProperty('--image',`url(${record.fields.image[0].url})`);
+    frontSide.append(name, crop, patronage);
+    frontSide.classList.add('front_side');
+    backSide.classList.add('back_side');
     cardContainer.append(card);
 
+    // Contents for the back side of card
     var description = document.createElement('div');
-    var link = document.createElement('div');
+    var link = document.createElement('a');
 
-    description.classList.add('card__desc','flip_card_back');
+    description.classList.add('card__desc');
     description.innerHTML = record.fields.description;
 
-    link.classList.add('link','flip_card_back');
-    
+    link.classList.add('link');
+    link.href = record.fields.more_info;
+    link.innerHTML = 'More Info';
 
+    backSide.append(description, link);
 
+    card.append(frontSide);
+    card.append(backSide);
+
+    // Filtering cards by category
     var filterAfflictions = document.querySelector('#one');
     filterAfflictions.addEventListener('click', function() {
       if (record.fields.category == 'afflictions') {
@@ -102,15 +118,23 @@ base('patrons').select({
 
     var showAll = document.querySelector('#all');
     showAll.addEventListener('click', function() {
-      if (record.fields.category == 'identity') {
-        card.style.display = 'inline-block';
-        filterIdentity.style.textShadow = '0px 0px 8px yellow';
-      } else {
-        card.style.display = 'none';
-        filterEnvironment.style.textShadow = 'none';
-        filterAfflictions.style.textShadow = 'none';
-      }
+      card.style.display = 'inline-block';
+      filterAfflictions.style.textShadow = 'none';
+      filterEnvironment.style.textShadow = 'none';
+      filterIdentity.style.textShadow = 'none';
     });
+
+    // Click function to enlarge selected cards
+    card.addEventListener('mouseenter', function() {
+      card.classList.add('active');
+      document.querySelector('#card-container').classList.add('blur');
+    })
+
+    card.addEventListener('mouseleave', function() {
+      card.classList.remove('active');
+      document.querySelector('#card-container').classList.remove('blur');
+    })
+
   });
 
 
@@ -122,8 +146,4 @@ base('patrons').select({
 }, function done(err) {
   if (err) { console.error(err); return; }
 });
-    function filter(record) {
-    var card = document.querySelector('.card')
 
- 
-    };
