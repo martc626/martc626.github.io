@@ -23,6 +23,21 @@ audio {
   flex-flow: row nowrap;
 }
 
+h1 {
+  font-family: capellina-rough, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 80px;
+  margin: 20px 30px;
+  color: blue;
+}
+
+h1:hover {
+  text-shadow: 0px 0px 10px yellow;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
 p {
   display: flex;
   cursor: pointer;
@@ -40,21 +55,6 @@ p:hover {
   cursor: pointer; 
 }
 
-h1 {
-  font-family: capellina-rough, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 80px;
-  margin: 20px 30px;
-  color: blue;
-}
-
-h1:hover {
-  text-shadow: 0px 0px 10px yellow;
-  transition: all 0.5s ease-in-out;
-  cursor: pointer;
-}
-
 .random {
   background-color: blue;
   border: 10px solid blue;
@@ -70,7 +70,7 @@ h1:hover {
   opacity: 0.5;
 }
 
-.randomcard {
+.icon {
   font-family: capellina-caps, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -117,9 +117,16 @@ h1:hover {
 .card:hover {
   box-shadow: 0px 0px 50px yellow;
   transition: all 0.5s ease-in-out;
-  cursor: pointer;
   transform: rotateY(180deg) scale(1.5);
   z-index: 1;
+}
+
+.show {
+  display: inline-block;
+}
+
+.hide {
+  display: none;
 }
 
 .front_side {
@@ -130,6 +137,7 @@ h1:hover {
   backface-visibility: hidden;
   background-color: #F1F8CA;
   border-radius: 10px;
+  height: 100%;
 }
 
 .back_side {
@@ -150,8 +158,8 @@ h1:hover {
   font-family: capellina-caps, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 30px;
-  padding: 5px;
+  font-size: 27px;
+  padding: 8px;
   color: blue;
   text-align: center;
 }
@@ -160,7 +168,7 @@ h1:hover {
   background-size: cover;
   background-image: var(--image);
   width: 220px;
-  height: 310px; 
+  height: 100%; 
   justify-content: center;
 }
 
@@ -175,18 +183,78 @@ h1:hover {
   font-family: new-spirit, serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 12px;
-  padding: 20px;
+  font-size: 13px;
+  margin: 20px;
 }
 
-@media (max-width: 1310px) {
+.link {
+  background-color: #E1E8B9;
+  font-size: 10px;
+  color: #9A7C7C;
+  padding: 10px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-random {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+#random-card-container {
+  width: 380px;
+  height: 480px;
+  margin: 13px;
+  vertical-align: top;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  background-color: #F1F8CA; 
+  border-radius: 13px;
+}
+
+#random-button {
+  font-family: capellina-caps, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  padding: 5px 10px;
+  margin: 13px;
+  color: #F1F8CA;
+  background-color: blue;
+  border-radius: 5px;  
+}
+
+#random-button:hover {
+  box-shadow: 0px 0px 10px yellow;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+@media (max-width: 1319px) {
   #card-container {
     width: 978px;
   }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  p {
+    font-size: 25px;
+  }
 }
 
-@media (max-width: 978px) {
+@media (max-width: 993px) {
   #card-container {
     width: 652px;
+  }
+
+  h1 {
+    font-size: 50px;
   }
 }

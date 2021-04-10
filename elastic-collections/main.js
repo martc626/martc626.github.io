@@ -24,6 +24,7 @@ base('patrons').select({
   // This function (`page`) will get called for each page of records.
 
   var cardContainer = document.querySelector('#card-container');
+  var randomCardContainer = document.querySelector('#random-card-container');
 
   ///////////////////////////////////////////////////////////////////////////////////////
   // Most of the code you write will probably take place around here
@@ -40,8 +41,7 @@ base('patrons').select({
     var crop = document.createElement('div');
     var image = document.createElement('img');
     var patronage = document.createElement('div');
-    var frontSide = document.createElement('div');
-    var backSide = document.createElement('div');
+    var frontSide = document.createElement('div');  
 
     name.classList.add('card__name');
     name.innerHTML = record.fields.patron_saints;
@@ -54,30 +54,36 @@ base('patrons').select({
 
     crop.classList.add('crop');
     card.classList.add('card');
-    // card.style.backgroundColor = '#F1F8CA';
-
-    // Append the new content to your document
-    card.style.setProperty('--image',`url(${record.fields.image[0].url})`);
-    frontSide.append(name, crop, patronage);
-    frontSide.classList.add('front_side');
-    backSide.classList.add('back_side');
-    cardContainer.append(card);
 
     // Contents for the back side of card
     var description = document.createElement('div');
     var link = document.createElement('a');
-
+    var backSide = document.createElement('div');
+    
     description.classList.add('card__desc');
     description.innerHTML = record.fields.description;
 
     link.classList.add('link');
     link.href = record.fields.more_info;
-    link.innerHTML = 'More Info';
+    link.innerHTML = 'Read more about ' + record.fields.patron_saints;
 
-    backSide.append(description, link);
+    // Append the new content to your document
+    card.style.setProperty('--image',`url(${record.fields.image[0].url})`);
+    frontSide.append(name, crop, patronage);
+    frontSide.classList.add('front_side');
+    backSide.append(description, link);    
+    backSide.classList.add('back_side');
+    cardContainer.append(card);
 
     card.append(frontSide);
     card.append(backSide);
+
+    // Contents for random generator
+    var randomize = document.querySelector('#random-button');
+    var hideRandom = function () {
+      randomize.style.display = 'none';
+      randomCardContainer.style.display = 'none';
+    }
 
     // Filtering cards by category
     var filterAfflictions = document.querySelector('#one');
@@ -87,6 +93,7 @@ base('patrons').select({
         filterAfflictions.style.textShadow = '0px 0px 8px yellow';
       } else {
         card.style.display = 'none';
+        hideRandom();
         filterEnvironment.style.textShadow = 'none';
         filterIdentity.style.textShadow = 'none';
       }
@@ -99,6 +106,7 @@ base('patrons').select({
         filterEnvironment.style.textShadow = '0px 0px 8px yellow';
       } else {
         card.style.display = 'none';
+        hideRandom();
         filterAfflictions.style.textShadow = 'none';
         filterIdentity.style.textShadow = 'none';
       }
@@ -111,6 +119,7 @@ base('patrons').select({
         filterIdentity.style.textShadow = '0px 0px 8px yellow';
       } else {
         card.style.display = 'none';
+        hideRandom();
         filterEnvironment.style.textShadow = 'none';
         filterAfflictions.style.textShadow = 'none';
       }
@@ -119,12 +128,13 @@ base('patrons').select({
     var showAll = document.querySelector('#all');
     showAll.addEventListener('click', function() {
       card.style.display = 'inline-block';
+      hideRandom();
       filterAfflictions.style.textShadow = 'none';
       filterEnvironment.style.textShadow = 'none';
       filterIdentity.style.textShadow = 'none';
     });
 
-    // Click function to enlarge selected cards
+    // Hover function to enlarge selected cards
     card.addEventListener('mouseenter', function() {
       card.classList.add('active');
       document.querySelector('#card-container').classList.add('blur');
@@ -134,6 +144,22 @@ base('patrons').select({
       card.classList.remove('active');
       document.querySelector('#card-container').classList.remove('blur');
     })
+
+    // Random generator
+    var random = document.querySelector('.random');
+    random.addEventListener('click', function() {
+      random.style.boxShadow = '0px 0px 10px yellow';
+      card.style.display = 'none';
+      randomCardContainer.style.display = 'block';
+      randomize.style.display = 'block';
+    })
+
+    var randomize = document.querySelector('#random-button');
+    randomize.addEventListener('click', function() {
+
+    })
+
+    // Hover function to flip for random cards
 
   });
 

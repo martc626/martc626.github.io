@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="bgm">
-    <audio controls autoplay>
+    <audio controls autoplay loop>
       <source src="bgm.mp3" type="audio/mp3">
     </audio> 
   </div>
@@ -28,7 +28,13 @@
   </div>
 
   <div class="random">
-    <div class="randomcard">?</div>
+    <div class="icon">?</div>
+  </div>
+
+  <div class="wrapper-random">
+    <div id="random-card-container">
+    </div>
+    <div id="random-button">Randomize</div>
   </div>
   <!--
     Include the official airtable javascript file before main.js
