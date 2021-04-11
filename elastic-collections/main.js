@@ -43,13 +43,13 @@ base('patrons').select({
     var patronage = document.createElement('div');
     var frontSide = document.createElement('div');  
 
-    name.classList.add('card__name');
+    name.classList.add('card-name');
     name.innerHTML = record.fields.patron_saints;
 
-    image.classList.add('card__image');
+    image.classList.add('card-image');
     image.src = record.fields.image[0].url;
 
-    patronage.classList.add('card__patronage');
+    patronage.classList.add('card-patronage');
     patronage.innerHTML = record.fields.patronage;   
 
     crop.classList.add('crop');
@@ -60,7 +60,7 @@ base('patrons').select({
     var link = document.createElement('a');
     var backSide = document.createElement('div');
     
-    description.classList.add('card__desc');
+    description.classList.add('card-desc');
     description.innerHTML = record.fields.description;
 
     link.classList.add('link');
@@ -70,9 +70,9 @@ base('patrons').select({
     // Append the new content to your document
     card.style.setProperty('--image',`url(${record.fields.image[0].url})`);
     frontSide.append(name, crop, patronage);
-    frontSide.classList.add('front_side');
+    frontSide.classList.add('front-side');
     backSide.append(description, link);    
-    backSide.classList.add('back_side');
+    backSide.classList.add('back-side');
     cardContainer.append(card);
 
     card.append(frontSide);
@@ -83,55 +83,67 @@ base('patrons').select({
     var hideRandom = function () {
       randomize.style.display = 'none';
       randomCardContainer.style.display = 'none';
+      random.classList.remove('icon-glow');
     }
 
     // Filtering cards by category
     var filterAfflictions = document.querySelector('#one');
+    var filterEnvironment = document.querySelector('#two');
+    var filterIdentity = document.querySelector('#three');
+    var showAll = document.querySelector('#all');
+    var showCards = function () {
+      card.style.display = 'inline-block';
+    }
+    var hideCards = function () {
+      card.style.display = 'none';
+    }
+    var removeTextGlow = function () {
+      filterAfflictions.classList.remove('text-glow');
+      filterEnvironment.classList.remove('text-glow');
+      filterIdentity.classList.remove('text-glow');      
+    }
+
+
     filterAfflictions.addEventListener('click', function() {
       if (record.fields.category == 'afflictions') {
-        card.style.display = 'inline-block';
-        filterAfflictions.style.textShadow = '0px 0px 8px yellow';
+        showCards();
+        filterAfflictions.classList.add('text-glow');
       } else {
-        card.style.display = 'none';
+        hideCards();
         hideRandom();
-        filterEnvironment.style.textShadow = 'none';
-        filterIdentity.style.textShadow = 'none';
+        filterEnvironment.classList.remove('text-glow');
+        filterIdentity.classList.remove('text-glow');
       }
     });
 
-    var filterEnvironment = document.querySelector('#two');
     filterEnvironment.addEventListener('click', function() {
       if (record.fields.category == 'environment') {
-        card.style.display = 'inline-block';
-        filterEnvironment.style.textShadow = '0px 0px 8px yellow';
+        showCards();
+        filterEnvironment.classList.add('text-glow');
       } else {
-        card.style.display = 'none';
+        hideCards();
         hideRandom();
-        filterAfflictions.style.textShadow = 'none';
-        filterIdentity.style.textShadow = 'none';
+        filterAfflictions.classList.remove('text-glow');
+        filterIdentity.classList.remove('text-glow');
       }
     });
 
-    var filterIdentity = document.querySelector('#three');
     filterIdentity.addEventListener('click', function() {
       if (record.fields.category == 'identity') {
-        card.style.display = 'inline-block';
-        filterIdentity.style.textShadow = '0px 0px 8px yellow';
+        showCards();
+        filterIdentity.classList.add('text-glow');
       } else {
-        card.style.display = 'none';
+        hideCards();
         hideRandom();
-        filterEnvironment.style.textShadow = 'none';
-        filterAfflictions.style.textShadow = 'none';
+        filterEnvironment.classList.remove('text-glow');
+        filterAfflictions.classList.remove('text-glow');
       }
     });
 
-    var showAll = document.querySelector('#all');
     showAll.addEventListener('click', function() {
-      card.style.display = 'inline-block';
+      showCards();
       hideRandom();
-      filterAfflictions.style.textShadow = 'none';
-      filterEnvironment.style.textShadow = 'none';
-      filterIdentity.style.textShadow = 'none';
+      removeTextGlow();
     });
 
     // Hover function to enlarge selected cards
@@ -148,10 +160,11 @@ base('patrons').select({
     // Random generator
     var random = document.querySelector('.random');
     random.addEventListener('click', function() {
-      random.style.boxShadow = '0px 0px 10px yellow';
+      random.classList.add('icon-glow');
       card.style.display = 'none';
       randomCardContainer.style.display = 'block';
       randomize.style.display = 'block';
+      removeTextGlow();
     })
 
     var randomize = document.querySelector('#random-button');
