@@ -78,14 +78,6 @@ base('patrons').select({
     card.append(frontSide);
     card.append(backSide);
 
-    // Contents for random generator
-    var randomize = document.querySelector('#random-button');
-    var hideRandom = function () {
-      randomize.style.display = 'none';
-      randomCardContainer.style.display = 'none';
-      random.classList.remove('icon-glow');
-    }
-
     // Filtering cards by category
     var filterAfflictions = document.querySelector('#one');
     var filterEnvironment = document.querySelector('#two');
@@ -102,7 +94,16 @@ base('patrons').select({
       filterEnvironment.classList.remove('text-glow');
       filterIdentity.classList.remove('text-glow');      
     }
-
+    var hideRandom = function () {
+      randomize.style.display = 'none';
+      randomCardContainer.style.display = 'none';
+      random.classList.remove('icon-glow');
+    }
+    var showRandom = function () {
+      randomize.style.display = 'block';
+      randomCardContainer.style.display = 'block';
+      random.classList.add('icon-glow');     
+    }
 
     filterAfflictions.addEventListener('click', function() {
       if (record.fields.category == 'afflictions') {
@@ -160,11 +161,9 @@ base('patrons').select({
     // Random generator
     var random = document.querySelector('.random');
     random.addEventListener('click', function() {
-      random.classList.add('icon-glow');
-      card.style.display = 'none';
-      randomCardContainer.style.display = 'block';
-      randomize.style.display = 'block';
+      hideCards();
       removeTextGlow();
+      showRandom();
     })
 
     var randomize = document.querySelector('#random-button');

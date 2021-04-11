@@ -232,7 +232,7 @@ p:hover {
   font-family: capellina-caps, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 22px;
+  font-size: 24px;
   padding: 5px 10px;
   margin: 13px;
   color: #F1F8CA;
@@ -330,6 +330,10 @@ p:hover {
   #random-card-container { 
     width: 400px;
     height: 500px;
+  }
+
+  #random-button {
+    font-size: 30px;
   }
 
 
