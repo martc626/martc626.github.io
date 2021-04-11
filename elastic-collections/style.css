@@ -269,3 +269,68 @@ p:hover {
     font-size: 25px;
   }
 }
+
+@media (max-width: 812px) {
+  .nav {
+    display: flex;
+    flex-flow: column;
+    text-align: end;
+  }
+
+  #all {
+    margin: 20px 20px;    
+  }
+
+  .filters {
+    margin: 20px; 
+    position: fixed;
+    display: flex;
+    flex-flow: column;
+    margin: 
+  }
+
+  p {
+    font-size: 30px;
+    margin: 17px 10px;
+  }
+
+  #card-container {
+    width: 326px;
+  }
+
+  .card {
+    width: 400px;
+    height: 500px;
+  }
+
+  .card:hover {
+    transform: rotateY(180deg);
+  }
+
+  .crop {
+    width: 310px;
+  }
+  
+  .card-name, .card-patronage {
+    font-size: 32px;
+  }
+
+  .card-desc{
+    font-size: 19px;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+  
+  .wrapper-random {
+    margin-left: 70px;
+  }
+
+  #random-card-container { 
+    width: 400px;
+    height: 500px;
+  }
+
+
+}
