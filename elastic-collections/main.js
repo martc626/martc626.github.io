@@ -198,7 +198,8 @@ base('patrons').select({
       card.classList.remove('active');
       document.querySelector('#card-container').classList.remove('blur');
     })
-    }
+
+  }
 
   });
 
