@@ -152,7 +152,7 @@ base('patrons').select({
     window.onscroll = function() {scrollFunction()};
 
     function scrollFunction() {
-      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
         scrollButton.style.display = 'block';
       } else {
         scrollButton.style.display = 'none';
@@ -178,11 +178,16 @@ base('patrons').select({
       showRandom();
     })
 
-    var randomCard = document.createElement('div');
     var randomize = document.querySelector('#random-button');
+    var allCards = document.querySelectorAll('.card');
     randomize.addEventListener('click', function() {
-      randomCard.classList.add('random-card');
-      randomCardContainer.append(randomCard);
+      var randomCard = allCards[Math.floor(Math.random() * allCards.length)];
+      console.log('randomCard', randomCard);
+      randomCard.setAttribute('id','random-card');
+      var randomCard = document.querySelector('#random-card');
+      randomCard.style.display = 'block';
+
+      randomCardContainer.innerHTML = randomCard.outerHTML;
     })
 
     // Hover function to flip for random cards
