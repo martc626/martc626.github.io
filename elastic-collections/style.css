@@ -276,7 +276,7 @@ p:hover {
 }
 
 .random-card {
-  display: none;
+  display: block;
   scale: 2;
 }
 
