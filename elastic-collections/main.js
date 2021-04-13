@@ -18,7 +18,7 @@ var base = Airtable.base('appWcMr0M9G3jibfD');
 
 base('patrons').select({
   // Specify the max number of records you want returned at once
-  maxRecords: 110,
+  // maxRecords: 110,
   view: 'Grid view'
 }).eachPage(function page(records, fetchNextPage) {
   // This function (`page`) will get called for each page of records.
@@ -147,6 +147,18 @@ base('patrons').select({
       removeTextGlow();
     });
 
+    // Scroll up function
+    var scrollButton = document.getElementById("scroll-button");
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        scrollButton.style.display = 'block';
+      } else {
+        scrollButton.style.display = 'none';
+      }
+    }
+
     // Hover function to enlarge selected cards
     card.addEventListener('mouseenter', function() {
       card.classList.add('active');
@@ -166,12 +178,27 @@ base('patrons').select({
       showRandom();
     })
 
+    var randomCard = document.createElement('div');
     var randomize = document.querySelector('#random-button');
     randomize.addEventListener('click', function() {
-
+      randomCard.classList.add('random-card');
+      randomCardContainer.append(randomCard);
     })
 
     // Hover function to flip for random cards
+
+    // Mobile responsive javascript code
+    if (matchMedia('only screen and (max-width: 812px)').matches) {
+      card.addEventListener('touchstart', function() {
+      card.classList.add('active');
+      document.querySelector('#card-container').classList.add('blur');
+    })
+
+      card.addEventListener('touchend', function() {
+      card.classList.remove('active');
+      document.querySelector('#card-container').classList.remove('blur');
+    })
+    }
 
   });
 
