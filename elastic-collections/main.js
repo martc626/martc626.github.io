@@ -183,11 +183,13 @@ base('patrons').select({
     randomize.addEventListener('click', function() {
       var randomCard = allCards[Math.floor(Math.random() * allCards.length)];
       console.log('randomCard', randomCard);
-      randomCard.setAttribute('id','random-card');
-      var randomCard = document.querySelector('#random-card');
-      randomCard.style.display = 'block';
+
 
       randomCardContainer.innerHTML = randomCard.outerHTML;
+      randomCard.classList.add('random-card');
+      var randomCard = document.querySelector('.random-card');
+      randomCard.style.display = 'block';
+
     })
 
     // Hover function to flip for random cards
