@@ -102,7 +102,25 @@ base('patrons').select({
     var showRandom = function () {
       randomize.style.display = 'block';
       randomCardContainer.style.display = 'block';
-      random.classList.add('icon-glow');     
+      random.classList.add('icon-glow'); 
+    }
+    var addBg = function () {
+      document.body.classList.add('gradient-bg');
+    }
+    var removeBg = function () {
+      document.body.classList.remove('gradient-bg');
+    }
+    var addWhiteText = function () {
+      filterAfflictions.classList.add('white-text');
+      filterEnvironment.classList.add('white-text');
+      filterIdentity.classList.add('white-text');
+      showAll.classList.add('white-text');
+    }
+    var removeWhiteText = function () {
+      filterAfflictions.classList.remove('white-text');
+      filterEnvironment.classList.remove('white-text');
+      filterIdentity.classList.remove('white-text');
+      showAll.classList.remove('white-text');
     }
 
     filterAfflictions.addEventListener('click', function() {
@@ -112,6 +130,8 @@ base('patrons').select({
       } else {
         hideCards();
         hideRandom();
+        removeBg();
+        removeWhiteText();
         filterEnvironment.classList.remove('text-glow');
         filterIdentity.classList.remove('text-glow');
       }
@@ -124,6 +144,8 @@ base('patrons').select({
       } else {
         hideCards();
         hideRandom();
+        removeBg();
+        removeWhiteText();
         filterAfflictions.classList.remove('text-glow');
         filterIdentity.classList.remove('text-glow');
       }
@@ -136,6 +158,8 @@ base('patrons').select({
       } else {
         hideCards();
         hideRandom();
+        removeBg();
+        removeWhiteText();
         filterEnvironment.classList.remove('text-glow');
         filterAfflictions.classList.remove('text-glow');
       }
@@ -145,6 +169,8 @@ base('patrons').select({
       showCards();
       hideRandom();
       removeTextGlow();
+      removeBg();
+      removeWhiteText();
     });
 
     // Scroll up function
@@ -176,6 +202,8 @@ base('patrons').select({
       hideCards();
       removeTextGlow();
       showRandom();
+      addBg();
+      addWhiteText();
     })
 
     var randomize = document.querySelector('#random-button');
