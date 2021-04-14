@@ -26,6 +26,35 @@ base('patrons').select({
   var cardContainer = document.querySelector('#card-container');
   var randomCardContainer = document.querySelector('#random-card-container');
 
+  // Filtering cards by category
+    var filterAfflictions = document.querySelector('#one');
+    var filterEnvironment = document.querySelector('#two');
+    var filterIdentity = document.querySelector('#three');
+    var showAll = document.querySelector('#all');
+    function removeTextGlow () {
+      filterAfflictions.classList.remove('text-glow');
+      filterEnvironment.classList.remove('text-glow');
+      filterIdentity.classList.remove('text-glow');      
+    }
+    function addBg () {
+      document.body.classList.add('gradient-bg');
+    }
+    function removeBg () {
+      document.body.classList.remove('gradient-bg');
+    }
+    function addWhiteText () {
+      filterAfflictions.classList.add('white-text');
+      filterEnvironment.classList.add('white-text');
+      filterIdentity.classList.add('white-text');
+      showAll.classList.add('white-text');
+    }
+    function removeWhiteText () {
+      filterAfflictions.classList.remove('white-text');
+      filterEnvironment.classList.remove('white-text');
+      filterIdentity.classList.remove('white-text');
+      showAll.classList.remove('white-text');
+    }
+
   ///////////////////////////////////////////////////////////////////////////////////////
   // Most of the code you write will probably take place around here
   // As you loop through the records returned from Airtable, you'll do something
@@ -78,21 +107,12 @@ base('patrons').select({
     card.append(frontSide);
     card.append(backSide);
 
-    // Filtering cards by category
-    var filterAfflictions = document.querySelector('#one');
-    var filterEnvironment = document.querySelector('#two');
-    var filterIdentity = document.querySelector('#three');
-    var showAll = document.querySelector('#all');
+    // Clearing cards
     var showCards = function () {
       card.style.display = 'inline-block';
     }
     var hideCards = function () {
       card.style.display = 'none';
-    }
-    var removeTextGlow = function () {
-      filterAfflictions.classList.remove('text-glow');
-      filterEnvironment.classList.remove('text-glow');
-      filterIdentity.classList.remove('text-glow');      
     }
     var hideRandom = function () {
       randomize.style.display = 'none';
@@ -104,25 +124,8 @@ base('patrons').select({
       randomCardContainer.style.display = 'block';
       random.classList.add('icon-glow'); 
     }
-    var addBg = function () {
-      document.body.classList.add('gradient-bg');
-    }
-    var removeBg = function () {
-      document.body.classList.remove('gradient-bg');
-    }
-    var addWhiteText = function () {
-      filterAfflictions.classList.add('white-text');
-      filterEnvironment.classList.add('white-text');
-      filterIdentity.classList.add('white-text');
-      showAll.classList.add('white-text');
-    }
-    var removeWhiteText = function () {
-      filterAfflictions.classList.remove('white-text');
-      filterEnvironment.classList.remove('white-text');
-      filterIdentity.classList.remove('white-text');
-      showAll.classList.remove('white-text');
-    }
 
+    // Filter functions
     filterAfflictions.addEventListener('click', function() {
       if (record.fields.category == 'afflictions') {
         showCards();
@@ -206,20 +209,6 @@ base('patrons').select({
       addWhiteText();
     })
 
-    var randomize = document.querySelector('#random-button');
-    var allCards = document.querySelectorAll('.card');
-    randomize.addEventListener('click', function() {
-      var randomCard = allCards[Math.floor(Math.random() * allCards.length)];
-      console.log('randomCard', randomCard);
-
-
-      randomCardContainer.innerHTML = randomCard.outerHTML;
-      randomCard.classList.add('random-card');
-      var randomCard = document.querySelector('.random-card');
-      randomCard.style.display = 'block';
-
-    })
-
     // Hover function to flip for random cards
 
     // Mobile responsive javascript code
@@ -235,6 +224,17 @@ base('patrons').select({
     })
 
   }
+
+  // Randomize
+    var randomize = document.querySelector('#random-button');
+    var allCards = document.querySelectorAll('.card');
+    randomize.addEventListener('click', function() {
+      var randomCard = allCards[Math.round(Math.random() * allCards.length - 1)].cloneNode(true);
+      randomCardContainer.appendChild(randomCard);
+      randomCard.classList.add('random-card');
+      randomCard.style.display = '';
+
+    })
 
   });
 
