@@ -278,17 +278,22 @@ p:hover {
 
 .random-card {
   display: block;
-  scale: 2;
+  transform: scale(1.1);
+  margin: 40px;
 }
 
 .gradient-bg {
-    background: radial-gradient(#ebf563, #97bcf9, #f3867b);
-    background-size: 1000% 1000%;
-    animation: gradient 11s ease infinite;
+	background: radial-gradient(#ebf563, #97bcf9, #f3867b);
+	background-size: 1000% 1000%;
+	animation: gradient 11s ease infinite;
 }
 
 .white-text {
-  color: white;
+  	color: white;
+}
+
+.hide-scroll {
+	visibility: hidden;
 }
 
 @keyframes gradient {
@@ -415,5 +420,11 @@ p:hover {
 
   #random-button {
     font-size: 30px;
+  }
+
+  .random-card {
+	display: block;
+	transform: scale(0.83);
+	margin: 2.34px;
   }
 }

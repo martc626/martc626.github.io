@@ -97,6 +97,7 @@ base('patrons').select({
 				hideRandom();
 				removeBg();
 				removeWhiteText();
+				showScrollButton();
 				filterEnvironment.classList.remove('text-glow');
 				filterIdentity.classList.remove('text-glow');
 			}
@@ -111,6 +112,7 @@ base('patrons').select({
 				hideRandom();
 				removeBg();
 				removeWhiteText();
+				showScrollButton();
 				filterAfflictions.classList.remove('text-glow');
 				filterIdentity.classList.remove('text-glow');
 			}
@@ -125,6 +127,7 @@ base('patrons').select({
 				hideRandom();
 				removeBg();
 				removeWhiteText();
+				showScrollButton();
 				filterEnvironment.classList.remove('text-glow');
 				filterAfflictions.classList.remove('text-glow');
 			}
@@ -136,6 +139,7 @@ base('patrons').select({
 			removeTextGlow();
 			removeBg();
 			removeWhiteText();
+			showScrollButton();
 		});
 
 		// Hover function to enlarge selected cards
@@ -187,6 +191,7 @@ base('patrons').select({
 		showRandom();
 		addBg();
 		addWhiteText();
+		hideScrollButton();
 	});
 
 	// Randomize

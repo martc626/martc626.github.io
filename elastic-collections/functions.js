@@ -65,3 +65,11 @@ function showRandom() {
 	randomCardContainer.style.display = 'block';
 	random.classList.add('icon-glow');
 }
+
+function hideScrollButton() {
+	scrollButton.classList.add('hide-scroll');
+}
+
+function showScrollButton() {
+	scrollButton.classList.remove('hide-scroll');
+}
