@@ -282,6 +282,10 @@ p:hover {
   margin: 40px;
 }
 
+.remove {
+	display: none;
+}
+
 .gradient-bg {
 	background: radial-gradient(#ebf563, #97bcf9, #f3867b);
 	background-size: 1000% 1000%;

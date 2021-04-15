@@ -195,11 +195,16 @@ base('patrons').select({
 	});
 
 	// Randomize
-	randomize.addEventListener('click', function () {
+	randomize.addEventListener('dblclick', function () {
 		var allCards = document.querySelectorAll('.card');
 		var randomCard = allCards[Math.round(Math.random() * allCards.length - 1)].cloneNode(true);
 		randomCardContainer.appendChild(randomCard);
 		randomCard.classList.add('random-card');
 		randomCard.style.display = '';
+	});
+
+	randomize.addEventListener('click', function () {
+		var randomCard = document.querySelector('.random-card');
+		randomCard.remove();
 	});
 });
