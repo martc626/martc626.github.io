@@ -4,6 +4,7 @@ html {
 
 body {
   background-color: white;
+  touch-action: manipulation;
 }
 
 audio {
