@@ -207,4 +207,5 @@ base('patrons').select({
 		var randomCard = document.querySelector('.random-card');
 		randomCard.remove();
 	});
+	
 });
