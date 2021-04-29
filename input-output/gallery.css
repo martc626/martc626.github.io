@@ -1,14 +1,9 @@
 html, body {
-	background-image: url('cloud-1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
+	background-color: white;
 	cursor: url('finger-cursor.png'), auto;
 	font-family: ff-providence-sans-web-pro, sans-serif;
 	margin: 0;
 	padding: 0;
-	user-select: none;
 }
 
 .header, .footer {
@@ -21,24 +16,9 @@ html, body {
 
 h1 {
 	margin: 0;
-	color: white;
 	font-weight: 400;
 	font-style: normal;
 	font-size: 35pt;
-}
-
-.save-button {
-	margin: 0 40px;
-	border: 2px solid white;
-	padding: 5px;
-	cursor: pointer;
-	color: white;
-	align-self: center;
-}
-
-.save-button:hover {
-	background-color: white;
-	color: black;
 }
 
 .footer {
@@ -63,7 +43,8 @@ svg {
 	fill: black;
 }
 
-.gallery {
+.back {
 	margin: 0 40px;
-	width: 80px;
+	align-self: center;
+	cursor: pointer;
 }
