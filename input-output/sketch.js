@@ -1,14 +1,7 @@
 // Functions for Drawing
 
 function setup () {
-	var c = createCanvas(windowWidth, windowHeight);
-	var saveButton = document.querySelector('.save-button');
-
-	saveButton.addEventListener('click', function (){
-		function save () {
-			saveCanvas(c, 'myCanvas', 'jpg');
-		}
-	})
+	createCanvas(windowWidth, windowHeight);
 }
 
 function draw () {
@@ -19,5 +12,8 @@ function draw () {
 }
 
 // Save button to download image
+var saveButton = document.querySelector('.save-button');
 
-
+saveButton.addEventListener('click', function (){
+	save('myCanvas.jpg');
+})
