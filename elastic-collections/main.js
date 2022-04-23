@@ -177,7 +177,14 @@ base('patrons').select({
 	if (err) {
 		console.error(err);
 		return;
-	}
+	}	
+
+  // Audio autoplay 
+  var audio = document.querySelector('#audio');
+
+	document.addEventListener('mousemove', function() {
+	  audio.play();
+	})
 
   // Scroll up function
   window.onscroll = function () {
